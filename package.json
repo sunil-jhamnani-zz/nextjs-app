@@ -1,0 +1,40 @@
+{
+  "name": "with-dynamic-import",
+  "version": "1.0.0",
+  "description": "This example features:",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@zeit/next-sass": "^1.0.1",
+    "babel-loader": "^8.0.5",
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "image-webpack-loader": "^4.6.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.0",
+    "minimist": "^1.2.0",
+    "next": "^8.0.1",
+    "next-redux-wrapper": "^3.0.0-alpha.1",
+    "node-sass": "^4.11.0",
+    "path": "^0.12.7",
+    "react": "^16.8.2",
+    "react-cookie": "^3.0.8",
+    "react-dom": "^16.8.2",
+    "react-lazyload": "^2.5.0",
+    "react-notifications": "^1.4.3",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

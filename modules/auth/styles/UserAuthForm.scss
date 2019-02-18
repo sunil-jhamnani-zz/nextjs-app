@@ -1,0 +1,27 @@
+.user-auth {
+  &__container {
+    position: absolute;
+    height: calc(100% - 86px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__auth-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 30px 4px rgba(43, 53, 224, 0.12);
+    border-radius: 3px;
+    padding: 30px * 2;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+}
+
+.help-block {
+  font-size: 12px;
+}

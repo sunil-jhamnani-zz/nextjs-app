@@ -1,0 +1,30 @@
+.notification-container {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  background-color: #d9534f;
+  color: white;
+  border-radius: 3px;
+
+  &__error {
+    background-color: #d9534f;
+  }
+
+  &__warning {
+    background-color: #ec971f;
+  }
+
+  &__info {
+    background-color: #5bc0de;
+  }
+
+  &__success {
+    background-color: #5cb85c;
+  }
+
+  &__message {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,22 @@
+.image-blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-top: 86px;
+
+  .image-entity {
+    &:nth-child(odd) {
+      width: 30%;
+    }
+
+    &:nth-child(even) {
+      width: 20%;
+    }
+
+    &:nth-child(nth + 2), &:nth-child(nth + 4), &:nth-child(nth + 9) {
+      width: 40%;
+    }
+  }
+}

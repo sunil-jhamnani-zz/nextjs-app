@@ -1,0 +1,23 @@
+@import '~bootstrap/scss/bootstrap';
+
+.page-header{
+  box-shadow: 0 2px 4px 0 rgba(43, 53, 224, 0.12);
+  position: fixed;
+  width: 100%;
+  background: white;
+
+  &__logo-container {
+    background: url("../../../assets/images/icons/logo.svg") no-repeat;
+    height: 70px;
+    cursor: pointer;
+  }
+
+  &__links {
+    text-align: right;
+  }
+
+  &__link {
+    margin-left: 30px;
+    cursor: pointer;
+  }
+}
