@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import { connect } from 'react-redux';
 import Router from 'next/router'
-import cookie from 'js-cookie'
 import '../styles/RegisterForm.scss';
 import UserAuthForm from './UserAuthForm';
 import { postRequest } from '../../../services/apiService';
@@ -55,11 +53,7 @@ class RegisterForm extends React.Component {
         return Promise.reject(error)
       }
     } catch (error) {
-      console.error(
-        'You have an error in your code or there are Network issues.',
-        error
-      );
-      throw new Error(error)
+      ShowNotification('This email is already taken', 'error');
     }
   }
 

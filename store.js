@@ -1,23 +1,9 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 
-import reducers from './reducers'
+import reducers from './reducers';
 
-const middlewares = [];
+const makeStore = initialState => (
+  createStore(reducers, initialState)
+);
 
-// push in logger as the last middleware
-// if (IS_DEV) {
-//   // eslint-disable-next-line global-require
-//   const { createLogger } = require('redux-logger');
-//   const logger = createLogger({
-//     diff: true,
-//     collapsed: true
-//   });
-//
-//   middlewares.push(logger);
-// }
-
-const makeStore = (initialState, options) => {
-  return createStore(reducers, initialState);
-};
-
-export default makeStore
+export default makeStore;

@@ -1,5 +1,5 @@
 import { lazyload } from 'react-lazyload';
-import '../styles/image-entity.scss'
+import '../styles/image-entity.scss';
 
 @lazyload({
   height: 200,

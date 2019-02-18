@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { connect } from 'react-redux';
 import '../styles/header.scss';
-import Router from 'next/router'
-import cookie from 'js-cookie'
+import Router from 'next/router';
+import cookie from 'js-cookie';
 import NotificationContainer from '../../notifications/components';
 
 class Header extends React.Component {
@@ -25,6 +25,7 @@ class Header extends React.Component {
   render () {
     const { isLoggedIn } = this.state;
     const { notification } = this.props;
+    console.log(notification);
     return (
       <nav className="page-header navbar">
         <div className="page-header__logo-container col">

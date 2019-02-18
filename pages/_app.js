@@ -3,7 +3,7 @@ import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
 import Head from 'next/head';
 import App, { Container } from 'next/app';
-import makeStore from '../store'
+import makeStore from '../store';
 
 class PaysenseApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -14,7 +14,7 @@ class PaysenseApp extends App {
           ? await Component.getInitialProps(ctx)
           : {})
       }
-    }
+    };
   }
 
   render() {

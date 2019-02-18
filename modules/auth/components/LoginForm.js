@@ -1,13 +1,13 @@
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Link from 'next/link';
 import Router from 'next/router'
 import cookie from 'js-cookie'
 import '../styles/LoginForm.scss';
-import { login as loginAction } from '../../../actions/authActions';
 import { postRequest } from '../../../services/apiService';
 import { COOKIE_EXPIRY_TIME } from '../../../constants';
 import UserAuthForm from './UserAuthForm';
+import { ShowNotification as ShowNotificationAction } from '../../../actions/notificationActions';
+import { bindActionCreators } from "redux";
+import {connect} from "react-redux";
 
 
 class LoginForm extends React.Component {
@@ -26,6 +26,7 @@ class LoginForm extends React.Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
+    const { ShowNotification } = this.props;
     this.setState({
       submitted: true
     });
@@ -52,14 +53,8 @@ class LoginForm extends React.Component {
         return Promise.reject(error)
       }
     } catch (error) {
-      console.error(
-        'You have an error in your code or there are Network issues.',
-        error
-      );
-      throw new Error(error)
+      ShowNotification('You have an error in your code or there are Network issues.', 'error');
     }
-    // const { login } = this.props;
-    // login(email, password);
   }
 
   render() {
@@ -100,12 +95,8 @@ class LoginForm extends React.Component {
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators({
-    login: loginAction
+    ShowNotification: ShowNotificationAction
   }, dispatch)
 );
 
-const mapStateToProps = state => ({
-  currentUser: state.currentUser
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default connect(null, mapDispatchToProps)(LoginForm);

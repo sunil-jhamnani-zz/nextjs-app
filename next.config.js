@@ -52,6 +52,7 @@ module.exports = withSass({
   },
   exportPathMap: function () {
     return {
+      '/': { page: '/login' },
       '/login': { page: '/login' },
       '/home': { page: '/home' },
       '/register': { page: '/register' }

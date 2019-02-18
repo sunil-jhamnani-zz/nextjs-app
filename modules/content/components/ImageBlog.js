@@ -1,7 +1,7 @@
 import ImageEntity from './ImageEntity';
 import fetch from 'isomorphic-unfetch';
 import getPixabayApiUrl from '../../../utils/getPixabayApiUrl';
-import '../styles/image-blog.scss'
+import '../styles/image-blog.scss';
 
 class ImageBlog extends React.Component {
   state ={
